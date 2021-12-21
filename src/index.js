@@ -4,6 +4,7 @@ const foodsList = document.querySelector('.foods-list');
 
 const loadFoods = async () => {
   const foods = await getFoods();
+  console.log(foods);
   if (foods.meals) {
     foods.meals.forEach((food) => {
       foodsList.innerHTML += `
