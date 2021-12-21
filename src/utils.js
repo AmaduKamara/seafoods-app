@@ -7,4 +7,4 @@ const getFoods = async () => {
   return response.data;
 };
 
-export { getFoods };
+export default getFoods;

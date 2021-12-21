@@ -1,4 +1,4 @@
-import { getFoods } from './utils.js';
+import getFoods from './utils.js';
 
 const foodsList = document.querySelector('.foods-list');
 
