@@ -9,9 +9,7 @@ const loadFoods = async () => {
       foodsList.innerHTML += `
       <!-- Food Card -->
       <div
-        class="card w-3/12 shadow-xl rounded-lg pb-8 overflow-hidden my-10 mx-6" id="${
-          food.idMeal
-        }"
+        class="card w-3/12 shadow-xl rounded-lg pb-8 overflow-hidden my-10 mx-6" id="${food.idMeal}"
       >
         <div class="w-full min-h-64">
           <img
@@ -61,7 +59,7 @@ const loadFoods = async () => {
   commentBtns.forEach((comment) => {
     const dataSet = comment.getAttribute('data-set');
 
-    comment.addEventListener('click', async (e) => {
+    comment.addEventListener('click', async () => {
       const food = foods.meals[dataSet];
 
       commentModal.classList.remove('hidden');
