@@ -4,15 +4,12 @@ const foodsList = document.querySelector('.foods-list');
 
 const loadFoods = async () => {
   const foods = await getFoods();
-  // console.log(foods);
   if (foods.meals) {
     foods.meals.forEach((food) => {
       foodsList.innerHTML += `
       <!-- Food Card -->
       <div
-        class="card w-3/12 shadow-xl rounded-lg pb-8 overflow-hidden my-10 mx-6" id="${
-          food.idMeal
-        }"
+        class="card w-3/12 shadow-xl rounded-lg pb-8 overflow-hidden my-10 mx-6" id="${food.idMeal}"
       >
         <div class="w-full min-h-64">
           <img
