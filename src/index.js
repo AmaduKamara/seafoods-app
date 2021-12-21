@@ -36,6 +36,7 @@ const loadFoods = async () => {
               hover:bg-orange-500 hover:text-orange-100
               text-lg
             "
+            id='comment-button'
           >
             Comments
           </button>
@@ -50,6 +51,24 @@ const loadFoods = async () => {
       </div>
     `;
   }
+
+  const commentBtns = document.querySelectorAll('#comment-button');
+  const closeModal = document.querySelector('.close-modal')
+
+ 
+
+  commentBtns.forEach(comment => {
+    comment.addEventListener('click', () => {
+      const commentModal = document.querySelector('.comment-modal')
+      commentModal.classList.remove('hidden');
+      closeModal.addEventListener('click', () => {
+        commentModal.classList.add('hidden');
+      })
+    })
+  })
+
 };
 
 loadFoods();
+
+
