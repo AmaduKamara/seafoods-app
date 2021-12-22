@@ -1,7 +1,7 @@
 import getFoods from './utils.js';
-import fetchLikes from './fetchLikes';
-import displayFoods from './displayFoods';
-import commentPopModal from './commentModal';
+import fetchLikes from './fetchLikes.js';
+import displayFoods from './displayFoods.js';
+import commentPopModal from './commentModal.js';
 
 const foodsList = document.querySelector('.foods-list');
 
@@ -10,8 +10,6 @@ const loadFoods = async () => {
 
   // Fetch likes
   const likes = await fetchLikes();
-
-  console.log(likes);
 
   if (foods.meals) {
     foods.meals.forEach((food, index) => {
@@ -32,7 +30,6 @@ const loadFoods = async () => {
     const dataSet = comment.getAttribute('data-set');
 
     comment.addEventListener('click', async () => {
-      
       const food = foods.meals[dataSet];
 
       commentModal.classList.remove('hidden');

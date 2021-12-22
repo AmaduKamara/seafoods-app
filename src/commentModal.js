@@ -1,5 +1,4 @@
-const commentModal = (food, likes) => {
-  return `
+const commentModal = (food) => `
     <div class="meal-details w-3/5 my-10 bg-white rounded-lg p-2 z-50 opacity-100">
       <!-- close btn -->
       <button type="button" class="float-right mr-3" id="close-modal">
@@ -59,6 +58,5 @@ const commentModal = (food, likes) => {
       </div>
     </div>
   `;
-};
 
 export default commentModal;

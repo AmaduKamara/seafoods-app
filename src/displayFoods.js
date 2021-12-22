@@ -1,10 +1,9 @@
-const displayFoods = (food, index, likes) => {
-  return `
+const displayFoods = (food, index, likes) => `
       <!-- Food Card -->
       <div
         class="card w-3/12 shadow-xl rounded-lg pb-8 overflow-hidden my-10 mx-6" id="${
-          food.idMeal
-        }"
+  food.idMeal
+}"
       >
         <div class="w-full min-h-64">
           <img
@@ -39,6 +38,5 @@ const displayFoods = (food, index, likes) => {
         </div>
       </div>
     `;
-};
 
 export default displayFoods;
