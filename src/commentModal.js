@@ -33,14 +33,16 @@ const commentModal = (food) => `
               <input
                 type="text"
                 placeholder="Enter your name"
-                class="border my-2 py-2 px-3 w-full"
+                class="border my-2 py-2 px-3 w-full focus:outline-orange-500"
+                id="user-name"
+                required
               />
               <textarea
                 placeholder="Comment..."
                 id="comment-text"
                 cols="20"
                 rows="3"
-                class="border my-2 py-2 px-3 w-full"
+                class="border my-2 py-2 px-3 w-full focus:outline-orange-500" required
               ></textarea>
               <button type="submit" class="bg-orange-500 py-2 px-10 w-full text-white rounded-full">Submit</button>
             </form>

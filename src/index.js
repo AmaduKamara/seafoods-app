@@ -62,6 +62,41 @@ const loadFoods = async () => {
 
       // Render content on the modal
       commentModal.innerHTML = commentPopModal(food);
+      const form = document.querySelector('form');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const userName = document.querySelector('#user-name');
+        const commentText = document.querySelector('#comment-text');
+
+        await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/comments', {
+          method: 'POST',
+          body: JSON.stringify({
+            item_id: `item${dataSet}`,
+            username: userName.value,
+            comment: commentText.value,
+          }),
+          headers: {
+            'Content-type': 'application/json',
+          },
+        });
+        const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/comments?item_id=item${dataSet}`);
+        const comments = await response.json();
+
+        const commentHolder = document.querySelector('.comments');
+
+        comments.forEach((comment) => {
+          commentHolder.innerHTML += `
+            <li class="my-2">
+              <span class="font-semibold">${comment.username}: </span>
+              <span class="text-gray-500">${comment.creation_date}</span> <br />
+              <span class="text-gray-700 text-sm"
+                >${comment.comment}</span
+              >
+            </li>
+          `;
+        });
+        form.reset();
+      });
 
       // Parse comment details into the comment wrapper
       const commentsData = document.querySelector('.comments');
