@@ -24,18 +24,9 @@ const commentModal = (food) => `
           </div>
         </div>
         <div class="w-2/5 p-6">
-          <h3 class="text-2xl text-orange-600">Comments:</h3>
+          <h3 class="text-2xl text-orange-600">Comments(2)</h3>
           <div >
-            <ul class="max-h-64 overflow-y-auto p-3">
-              <li class="my-2">
-                <span class="font-semibold">Amadu Kamara: </span>
-                <span class="text-gray-500">21/12/2021</span> <br />
-                <span class="text-gray-700 text-sm"
-                  >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Quo, assumenda.</span
-                >
-              </li>
-            </ul>
+            <ul class="max-h-64 overflow-y-auto p-3 comments"></ul>
             <!-- Comment form-->
             <form class="border p-3 mt-10 rounded">
               <h4>Place your comment below</h4>
