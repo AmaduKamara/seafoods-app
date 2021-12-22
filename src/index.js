@@ -14,7 +14,29 @@ const loadFoods = async () => {
 
   if (foods.meals) {
     foods.meals.forEach((food, index) => {
+      // Display food data to the homepage
       foodsList.innerHTML += displayFoods(food, index, likes);
+
+      // Liking a food item
+      const likeButtons = document.querySelectorAll('.like-button');
+      const likeHolder = document.querySelectorAll('.like');
+      likeButtons.forEach((likeButton, index) => {
+        likeButton.addEventListener('click', async () => {
+          await fetch(
+            'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/likes',
+            {
+              method: 'POST',
+              body: JSON.stringify({
+                item_id: `item${index}`,
+              }),
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+            },
+          );
+          likeHolder[index].innerHTML = `${likes[index].likes + 1} Likes`;
+        });
+      });
     });
   } else {
     foodsList.innerHTML += `

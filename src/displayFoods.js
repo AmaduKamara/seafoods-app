@@ -14,8 +14,8 @@ const displayFoods = (food, index, likes) => `
         <div class="p-5 my-4 flex justify-between items-center">
           <h2 class="text-xl text-orange-700">${food.strMeal.slice(0, 24)}</h2>
           <div class="flex flex-col items-center">
-            <i class="far fa-heart text-xl hover:text-orange-500 like"></i>
-            <span class="mx-3">${likes[index].likes} likes</span>
+            <i class="far fa-heart text-xl hover:text-orange-500 like-button cursor-pointer"></i>
+            <span class="mx-3 like">${likes[index].likes} likes</span>
           </div>
           <!-- <i class="fas fa-heart"></i> -->
         </div>
