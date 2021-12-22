@@ -68,18 +68,23 @@ const loadFoods = async () => {
         const userName = document.querySelector('#user-name');
         const commentText = document.querySelector('#comment-text');
 
-        await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/comments', {
-          method: 'POST',
-          body: JSON.stringify({
-            item_id: `item${dataSet}`,
-            username: userName.value,
-            comment: commentText.value,
-          }),
-          headers: {
-            'Content-type': 'application/json',
+        await fetch(
+          'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/comments',
+          {
+            method: 'POST',
+            body: JSON.stringify({
+              item_id: `item${dataSet}`,
+              username: userName.value,
+              comment: commentText.value,
+            }),
+            headers: {
+              'Content-type': 'application/json',
+            },
           },
-        });
-        const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/comments?item_id=item${dataSet}`);
+        );
+        const response = await fetch(
+          `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/comments?item_id=item${dataSet}`,
+        );
         const comments = await response.json();
 
         const commentHolder = document.querySelector('.comments');
