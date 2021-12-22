@@ -32,9 +32,9 @@ const loadFoods = async () => {
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
               },
-            }
+            },
           );
-          likeHolder[index].innerHTML = `${likes[index].likes + 1}  Likes`;
+          likeHolder[index].innerHTML = `${likes[index].likes + 1} Likes`;
         });
       });
     });
