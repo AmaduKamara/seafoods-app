@@ -9,6 +9,10 @@ const foodsList = document.querySelector('.foods-list');
 const loadFoods = async () => {
   const foods = await getFoods();
 
+  // Fetch food counter span element and display food length value and foods count
+  const foodCounter = document.querySelector('.food-counter');
+  foodCounter.innerHTML = foods.meals.length;
+
   // Fetch likes
   const likes = await fetchLikes();
 
@@ -32,7 +36,7 @@ const loadFoods = async () => {
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
               },
-            },
+            }
           );
           likeHolder[index].innerHTML = `${likes[index].likes + 1} Likes`;
         });
