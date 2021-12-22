@@ -62,10 +62,13 @@ const loadFoods = async () => {
       commentModal.classList.remove('hidden');
 
       // fetchComments(dataSet)
-      const comments = await fetchComments(dataSet);
-
+      const comments = await fetchComments(dataSet);   
+      
       // Render content on the modal
       commentModal.innerHTML = commentPopModal(food);
+      const commentCounter = document.querySelector('.comment-counter')
+      commentCounter.innerHTML = comments.length;      
+        
       const form = document.querySelector('form');
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -89,7 +92,9 @@ const loadFoods = async () => {
         const response = await fetch(
           `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/comments?item_id=item${dataSet}`,
         );
+        
         const comments = await response.json();
+        
 
         const commentHolder = document.querySelector('.comments');
 
