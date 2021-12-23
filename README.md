@@ -6,8 +6,7 @@
 
 
 ### ScreenShoot
-![screenshot](./image/../ScreenShot-Seafoods.png)
-
+![image](https://user-images.githubusercontent.com/50941074/147246657-1b9d6b7d-c777-4803-96e3-2513d0956bfa.png)
 
 ## Built With
 
