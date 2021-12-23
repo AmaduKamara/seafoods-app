@@ -1,5 +1,5 @@
 const commentModal = (food) => `
-    <div class="meal-details w-1/3 h-5/6 bg-white rounded-lg p-2 z-50 opacity-100 overflow-y-auto relative">
+    <div class="meal-details w-full mx-5 md:w-1/3 h-5/6 bg-white rounded-lg p-2 z-50 opacity-100 overflow-y-auto relative">
       <!-- close btn -->
       <button type="button" class="float-right mr-1 absolute right-0 top-0 sticky" id="close-modal">
         <i class="fa fa-close text-2xl text-orange-500 hover:text-red-300"></i>
