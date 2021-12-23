@@ -14,7 +14,7 @@ const loadFoods = async () => {
   foodCounter.innerHTML = foods.meals.length;
 
   // Fetch likes
-  const likes = await fetchLikes();
+  let likes = await fetchLikes();
 
   if (foods.meals) {
     foods.meals.forEach((food, index) => {
@@ -36,9 +36,10 @@ const loadFoods = async () => {
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
               },
-            },
+            }
           );
-          likeHolder[index].innerHTML = `${likes[index].likes + 1} Likes`;
+          likes = await fetchLikes();
+          likeHolder[index].innerHTML = `${likes[index].likes} Likes`;
         });
       });
     });
@@ -102,7 +103,7 @@ const loadFoods = async () => {
             headers: {
               'Content-type': 'application/json',
             },
-          },
+          }
         );
         comments = await fetchComments(dataSet);
         // comments = await response.json();
