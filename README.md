@@ -4,9 +4,13 @@
 
 >This website displays seafoods meals gotten from an API [MealsDb](https://themealdb.com/browse.php?b=f)
 
+### ScreenShoot - Mobile screens
 
-### ScreenShoot
-![image](https://user-images.githubusercontent.com/50941074/147246657-1b9d6b7d-c777-4803-96e3-2513d0956bfa.png)
+![image](https://user-images.githubusercontent.com/50941074/147270738-aa0e9cb1-8fb3-4e16-9df1-614d636f1e05.png)
+
+### ScreenShoot - Desktop screens
+
+![image](https://user-images.githubusercontent.com/50941074/147270429-b2826c00-19b3-4fbb-bde1-a5d234117dd6.png)
 
 ## Built With
 
