@@ -36,7 +36,7 @@
     <section
       class="h-64 flex justify-center items-center hero-section bg-orange-500"
     >
-      <div class="container mx-auto text-center">
+      <div class="md:container md:mx-auto text-center">
         <h1 class="text-5xl md:text-7xl tracking-widest text-white">
           Seafoods
         </h1>
@@ -48,7 +48,16 @@
     </section>
 
     <section
-      class="mt-8 container mx-auto foods-list flex flex-wrap justify-center"
+      class="
+        container
+        mx-auto
+        foods-list
+        grid grid-cols-1
+        md:grid-cols-3
+        gap-8
+        px-6
+        mt-10
+      "
     ></section>
     <!-- Popup Modal Structure -->
     <div
@@ -69,7 +78,7 @@
       "
     ></div>
 
-    <footer class="mt-16 py-6 w-full">
+    <footer class="mt-16 py-6 w-full px-6">
       <div class="container mx-auto">
         <p class="opacity-70">
           Created by:

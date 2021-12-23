@@ -1,9 +1,9 @@
 const displayFoods = (food, index, likes) => `
       <!-- Food Card -->
       <div
-        class="card w-3/12 shadow-xl rounded-lg pb-8 overflow-hidden my-10 mx-6" id="${
-  food.idMeal
-}"
+        class="card w-full shadow-xl rounded-lg pb-8 overflow-hidden my-3" id="${
+          food.idMeal
+        }"
       >
         <div class="w-full min-h-64">
           <img
