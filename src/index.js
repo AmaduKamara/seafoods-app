@@ -62,11 +62,29 @@ const loadFoods = async () => {
       commentModal.classList.remove('hidden');
 
       // fetchComments(dataSet)
-      const comments = await fetchComments(dataSet);
+      let comments = await fetchComments(dataSet);
 
       // Render content on the modal
       commentModal.innerHTML = commentPopModal(food);
+
+      const commentCounter = document.querySelector('.comment-counter');
+      commentCounter.innerHTML = comments.length;
+
+      const commentHolder = document.querySelector('.comments');
+      comments.forEach((comment) => {
+        commentHolder.innerHTML += `
+            <li class="my-2">
+              <span class="font-semibold">${comment.username}: </span>
+              <span class="text-gray-500">${comment.creation_date}</span> <br />
+              <span class="text-gray-700 text-sm"
+                >${comment.comment}</span
+              >
+            </li>
+          `;
+      });
+
       const form = document.querySelector('form');
+
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const userName = document.querySelector('#user-name');
@@ -86,13 +104,9 @@ const loadFoods = async () => {
             },
           },
         );
-        const response = await fetch(
-          `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/9saeNJzYKOKWWOIJdrpS/comments?item_id=item${dataSet}`,
-        );
-        const comments = await response.json();
-
-        const commentHolder = document.querySelector('.comments');
-
+        comments = await fetchComments(dataSet);
+        // comments = await response.json();
+        commentHolder.innerHTML = '';
         comments.forEach((comment) => {
           commentHolder.innerHTML += `
             <li class="my-2">
@@ -104,21 +118,8 @@ const loadFoods = async () => {
             </li>
           `;
         });
+        commentCounter.innerHTML = comments.length;
         form.reset();
-      });
-
-      // Parse comment details into the comment wrapper
-      const commentsData = document.querySelector('.comments');
-      comments.forEach((comment) => {
-        commentsData.innerHTML += `
-          <li class="my-2">
-            <span class="font-semibold">${comment.username}: </span>
-            <span class="text-gray-500">${comment.creation_date}</span> <br />
-            <span class="text-gray-700 text-sm"
-              >${comment.comment}</span
-            >
-          </li>
-        `;
       });
 
       // Close Modal

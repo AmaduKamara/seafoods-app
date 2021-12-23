@@ -24,7 +24,7 @@ const commentModal = (food) => `
           </div>
         </div>
         <div class="w-2/5 p-6">
-          <h3 class="text-2xl text-orange-600">Comments(2)</h3>
+          <h3 class="text-2xl text-orange-600">Comments(<span class="font-semibold comment-counter">0</span>)</h3>
           <div >
             <ul class="max-h-64 overflow-y-auto p-3 comments"></ul>
             <!-- Comment form-->
