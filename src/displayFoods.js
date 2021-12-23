@@ -15,7 +15,7 @@ const displayFoods = (food, index, likes) => `
           <h2 class="text-xl text-orange-700">${food.strMeal.slice(0, 24)}</h2>
           <div class="flex flex-col items-center">
             <i class="far fa-heart text-xl hover:text-orange-500 like-button cursor-pointer"></i>
-            <span class="mx-3 like">${likes[index].likes} likes</span>
+            <span class="mx-3 like text-center">${likes[index].likes} likes</span>
           </div>
           <!-- <i class="fas fa-heart"></i> -->
         </div>
@@ -23,7 +23,7 @@ const displayFoods = (food, index, likes) => `
           <button
             class="
               py-2
-              px-16
+              px-10
               border border-orange-500
               rounded-full
               text-orange-500
@@ -33,7 +33,7 @@ const displayFoods = (food, index, likes) => `
             id='comment-button'
             data-set="${index}"
           >
-            Comments
+            Comment
           </button>
         </div>
       </div>
