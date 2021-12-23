@@ -62,16 +62,16 @@ const loadFoods = async () => {
       commentModal.classList.remove('hidden');
 
       // fetchComments(dataSet)
-      let comments = await fetchComments(dataSet);   
-      
+      let comments = await fetchComments(dataSet);
+
       // Render content on the modal
       commentModal.innerHTML = commentPopModal(food);
 
-      const commentCounter = document.querySelector('.comment-counter')
-      commentCounter.innerHTML = comments.length
-      
+      const commentCounter = document.querySelector('.comment-counter');
+      commentCounter.innerHTML = comments.length;
+
       const commentHolder = document.querySelector('.comments');
-      comments.forEach(comment => {
+      comments.forEach((comment) => {
         commentHolder.innerHTML += `
             <li class="my-2">
               <span class="font-semibold">${comment.username}: </span>
@@ -81,8 +81,8 @@ const loadFoods = async () => {
               >
             </li>
           `;
-      })
-        
+      });
+
       const form = document.querySelector('form');
 
       form.addEventListener('submit', async (e) => {
@@ -102,10 +102,11 @@ const loadFoods = async () => {
             headers: {
               'Content-type': 'application/json',
             },
-          });
+          },
+        );
         comments = await fetchComments(dataSet);
         // comments = await response.json();
-        commentHolder.innerHTML = ''
+        commentHolder.innerHTML = '';
         comments.forEach((comment) => {
           commentHolder.innerHTML += `
             <li class="my-2">
@@ -117,7 +118,7 @@ const loadFoods = async () => {
             </li>
           `;
         });
-        commentCounter.innerHTML = comments.length;   
+        commentCounter.innerHTML = comments.length;
         form.reset();
       });
 
