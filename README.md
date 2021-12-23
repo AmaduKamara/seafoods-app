@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo](https://seafoods-app.netlify.app/)
 
 ## Video Documentation
 [Live video]()
