@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const getFoodDetails = async (id) => {
   const response = await axios.get(
-    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`,
   );
   // console.log(response.data.meals);
   return response.data.meals;
@@ -34,28 +34,28 @@ const commentModal = async (food, id) => {
           <div class="mt-2">
             <div class=" my-1">
               <h3 class="text-center text-3xl md:text-4xl text-orange-500 mt-5 mb-2">${
-                food.strMeal
-              }</h3>
+  food.strMeal
+}</h3>
               <h4 class="text-left text-xl md:text-3xl text-orange-700 mt-5 mb-2">Ingredients:</h4>
               
               <i class="text-left text-xs md:text-2xl mt-5 mb-2 text-gray-500">${
-                details[0].strIngredient1
-              },</i>
+  details[0].strIngredient1
+},</i>
               <i class="text-left text-xs md:text-2xl mt-5 mb-2 mx-2 text-gray-500">${
-                details[0].strIngredient2
-              },</i>
+  details[0].strIngredient2
+},</i>
               <i class="text-left text-xs md:text-2xl mt-5 mb-2 mx-2 text-gray-500">${
-                details[0].strIngredient3
-              },</i>
+  details[0].strIngredient3
+},</i>
               <i class="text-left text-xs md:text-2xl mt-5 mb-2 text-gray-500">${
-                details[0].strIngredient4
-              }.</i>
+  details[0].strIngredient4
+}.</i>
 
               <h4 class="text-left text-xl md:text-3xl text-orange-700 mt-5 mb-2">Instructions:</h4>
               <p class="text-left text-xs md:text-2xl mt-5 mb-2 text-gray-500">${details[0].strInstructions.slice(
-                0,
-                150
-              )}</p>
+    0,
+    150,
+  )}</p>
             </div>
           </div>
         </div>
