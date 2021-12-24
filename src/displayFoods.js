@@ -13,7 +13,7 @@ const displayFoods = (food, index, likes) => `
         </div>
         <div class="p-5 my-4 flex justify-between items-center">
           <h2 class="text-xl text-orange-700">${food.strMeal.slice(0, 24)}</h2>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center w-24">
             <i class="far fa-heart text-xl hover:text-orange-500 like-button cursor-pointer"></i>
             <span class="mx-3 like text-center">${likes[index].likes} likes</span>
           </div>
