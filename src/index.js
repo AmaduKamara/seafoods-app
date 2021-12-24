@@ -3,6 +3,7 @@ import fetchLikes from './fetchLikes.js';
 import displayFoods from './displayFoods.js';
 import commentPopModal from './commentModal.js';
 import fetchComments from './fetchComment.js';
+import axios from 'axios';
 
 const foodsList = document.querySelector('.foods-list');
 
@@ -36,7 +37,7 @@ const loadFoods = async () => {
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
               },
-            },
+            }
           );
           likes = await fetchLikes();
           likeHolder[index].innerHTML = `${likes[index].likes} Likes`;
@@ -58,6 +59,11 @@ const loadFoods = async () => {
     const dataSet = comment.getAttribute('data-set');
 
     comment.addEventListener('click', async () => {
+      // const fetchedFood = await axios.get(
+      //   'https://www.themealdb.com/api/json/v1/1/lookup.php?i=53043'
+      // );
+      // console.log(fetchedFood);
+
       const food = foods.meals[dataSet];
 
       commentModal.classList.remove('hidden');
@@ -66,7 +72,7 @@ const loadFoods = async () => {
       let comments = await fetchComments(dataSet);
 
       // Render content on the modal
-      commentModal.innerHTML = commentPopModal(food);
+      commentModal.innerHTML = await commentPopModal(food, food.idMeal);
 
       const commentCounter = document.querySelector('.comment-counter');
       commentCounter.innerHTML = comments.length;
@@ -103,7 +109,7 @@ const loadFoods = async () => {
             headers: {
               'Content-type': 'application/json',
             },
-          },
+          }
         );
         comments = await fetchComments(dataSet);
         // comments = await response.json();
