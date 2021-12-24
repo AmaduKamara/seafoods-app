@@ -1,8 +1,10 @@
+
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # MD Seafoods
 
->This website displays seafoods meals gotten from an API [MealsDb](https://themealdb.com/browse.php?b=f)
+This website fetches seafoods meals gotten from an API [MealsDb](https://themealdb.com/browse.php?b=f) and display on the homepage.
+One can like a food by clicking on the heart icon and comment on a specific food by clicking on the comment button to have access to the comment form and place your comment in an instant.
 
 ### ScreenShoot - Mobile screens
 
@@ -26,7 +28,7 @@
 [Live Demo](https://seafoods-app.netlify.app/)
 
 ## Video Documentation
-[Live video]()
+[Video](https://drive.google.com/file/d/16scw5r_WTeST04d4wZqt5YDSslMAUfRc/view?usp=sharing)
 
 ## Getting Started
 
