@@ -3,9 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Open+Sans:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Seafoods Web App</title>
   </head>
   <body>
-    <h1>Seafood App</h1>
+    <header class="py-5 shadow-lg sticky top-0 bg-white z-50">
+      <div class="mx-4  md:container md:mx-8 lg:mx-16 flex items-center">
+        <a
+          href="./index.html"
+          class="text-xl md:text-3xl font-bold text-orange-600 mr-16"
+          >MD Seafoods</a
+        >
+        <a href="./index.html" class="md:text-xl"
+          >Seafoods(<span class="md:text-xl font-semibold food-counter">0</span
+          >)
+        </a>
+      </div>
+    </header>
+    <section
+      class="h-56 flex justify-center items-center hero-section bg-orange-500"
+    >
+      <div class="md:container md:mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl tracking-widest text-white">
+          Seafoods
+        </h1>
+        <p class="text-white my-3 md:text-xl">
+          Seafood makes you live 10 years more. <br />
+          <cite>- Kevin Steele</cite>
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="
+        container
+        mx-auto
+        foods-list
+        grid grid-cols-1
+        md:grid-cols-3
+        lg:grid-cols-4
+        gap-8
+        px-6
+        mt-12
+      "
+    ></section>
+    <!-- Popup Modal Structure -->
+    <div
+      class="
+        comment-modal
+        flex
+        justify-center
+        items-center
+        bg-gray-800
+        fixed
+        top-0
+        left-0
+        w-full
+        h-full
+        opacity-95
+        z-50
+        hidden
+      "
+    ></div>
+
+    <footer class="mt-16 py-6 w-full px-6">
+      <div class="container mx-auto">
+        <p class="opacity-70">
+          Created by:
+          <a
+            href="https://github.com/AmaduKamara"
+            target="_blank"
+            class="text-orange-600"
+            rel="noreferrer noopener"
+            >Amadu Kamara</a
+          >
+          &
+          <a
+            href="https://github.com/Debas-31"
+            target="_blank"
+            class="text-orange-600"
+            rel="noreferrer noopener"
+            >Debas Gebreslasie</a
+          >
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
