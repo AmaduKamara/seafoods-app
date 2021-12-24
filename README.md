@@ -28,7 +28,7 @@ One can like a food by clicking on the heart icon and comment on a specific food
 [Live Demo](https://seafoods-app.netlify.app/)
 
 ## Video Documentation
-[Video](https://drive.google.com/file/d/1yJMniajNASvKvGaUk6lF7yoetIP4ZV-C/view?usp=sharing)
+[Video](https://drive.google.com/file/d/1H0B7uhlkqaaiMn89JPgg2FAVUZ7hrrfY/view?usp=sharing)
 
 ## Getting Started
 
@@ -55,13 +55,18 @@ cd seafoods-app
 ```bash
 npm i or npm install
 ```
+- To build
+```bash
+npm run build
+```
+
 - To run the server
 ```bash
 npm start
 ```
 - To test the project
 ```bash
-npm test
+npm run test
 ```
 
 - To run StyleLint by itself, you may run the lint task:
