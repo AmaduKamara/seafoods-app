@@ -28,7 +28,7 @@ One can like a food by clicking on the heart icon and comment on a specific food
 [Live Demo](https://seafoods-app.netlify.app/)
 
 ## Video Documentation
-[Video](https://drive.google.com/file/d/16scw5r_WTeST04d4wZqt5YDSslMAUfRc/view?usp=sharing)
+[Video](https://drive.google.com/file/d/1yJMniajNASvKvGaUk6lF7yoetIP4ZV-C/view?usp=sharing)
 
 ## Getting Started
 
