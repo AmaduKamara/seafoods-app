@@ -46,27 +46,37 @@ To get a local copy up and running follow these simple example steps.
 
 ```bash 
 git clone git@github.com:AmaduKamara/seafoods-app
+
+cd seafoods-app
 ```
 
 - Install Dependencies
 
 ```bash
-npm install
+npm i or npm install
+```
+- To run the server
+```bash
+npm start
+```
+- To test the project
+```bash
+npm test
 ```
 
-To run StyleLint by itself, you may run the lint task:
+- To run StyleLint by itself, you may run the lint task:
 
 ```bash
 npx stylelint "**/*.{css,scss}"
 ```
 
-Or to automatically fix issues found (where possible):
+- Automatically fix issues found (where possible):
 
 ```bash
 npx stylelint "**/*.{css,scss}" --fix
 ```
 
-You can also check against Webhint:
+- Check against Webhint:
 
 ```bash
 npx hint --telemetry=off .
