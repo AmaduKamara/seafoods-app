@@ -36,7 +36,7 @@ const loadFoods = async () => {
               headers: {
                 'Content-type': 'application/json; charset=UTF-8',
               },
-            }
+            },
           );
           likes = await fetchLikes();
           likeHolder[index].innerHTML = `${likes[index].likes} Likes`;
@@ -103,7 +103,7 @@ const loadFoods = async () => {
             headers: {
               'Content-type': 'application/json',
             },
-          }
+          },
         );
         comments = await fetchComments(dataSet);
         // comments = await response.json();
